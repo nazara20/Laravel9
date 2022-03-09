@@ -3,6 +3,7 @@
 use App\Http\Controllers\BookController;
 use App\Http\Controllers\CategoryController;
 use App\Http\Controllers\HomeController;
+use App\Http\Controllers\UserController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -19,7 +20,10 @@ use Illuminate\Support\Facades\Route;
 
 
 Route::get('/', [HomeController::class, 'index'])->name('beranda');
-Route::get('/book', [BookController::class, 'index'])->name('buku');
+Route::get('/books', [BookController::class, 'index'])->name('buku');
+Route::get('/books.detail/{slug}', [BookController::class, 'detail'])->name('books.detail');
 Route::get('/category', [CategoryController::class, 'index'])->name('kategori');
+Route::get('/categories.detail{slug}', [CategoryController::class, 'detail'])->name('categories.detail');
+Route::get('/users', [UserController::class, 'index'])->name('siswa');
 
 

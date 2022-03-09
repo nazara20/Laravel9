@@ -15,6 +15,9 @@
                   <li class="nav-item">
                     <a class="nav-link {{  (request()->routeIs('kategori')) ? 'active' : ''  }} " href="{{ route('kategori') }}">Kategori</a>
                   </li>
+                  <li class="nav-item">
+                    <a class="nav-link {{  (request()->routeIs('siswa')) ? 'active' : ''  }} " href="{{ route('siswa') }}">Siswa</a>
+                  </li>
                 </div>
                   <div>
                     <ul class="navbar-nav me-auto mt-2 mt-lg-0">

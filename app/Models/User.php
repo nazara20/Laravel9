@@ -21,6 +21,7 @@ class User extends Authenticatable
         'name',
         'email',
         'password',
+        'role',
     ];
 
     /**
@@ -41,4 +42,15 @@ class User extends Authenticatable
     protected $casts = [
         'email_verified_at' => 'datetime',
     ];
+
+    // scope role is user
+    public function scopeIsUser($query)
+    {
+        return $query->whereRole('student');
+    }
+
+    public function student()
+    {
+        return $this->hasOne(Student::class);
+    }
 }
