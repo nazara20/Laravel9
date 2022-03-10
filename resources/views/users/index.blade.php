@@ -2,7 +2,7 @@
 @section('content')
 
 <div class="row justify-content-center">
-  <div class="col-md-8 pt-5">
+  <div class="col-md-8">
     <div class="table-responsive">
       <table class="table table-striped table-bordered">
         <thead>
@@ -19,7 +19,7 @@
             <tr>
               <td>{{ $loop->iteration }}</td>
               <td>{{ $users->student->nis }}</a></td>
-              <td>{{ $users->name }}</td>
+              <td><a href="{{ route('users.detail', $users->id) }}">{{ $users->name }}</a></td>
               <td>{{ $users->email }}</td>
               <td>{{ $users->student->phone }}</td>
             </tr>

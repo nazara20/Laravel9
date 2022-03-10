@@ -25,5 +25,7 @@ Route::get('/books.detail/{slug}', [BookController::class, 'detail'])->name('boo
 Route::get('/category', [CategoryController::class, 'index'])->name('kategori');
 Route::get('/categories.detail{slug}', [CategoryController::class, 'detail'])->name('categories.detail');
 Route::get('/users', [UserController::class, 'index'])->name('siswa');
+Route::get('/users.detail/{id}', [UserController::class, 'detail'])->name('users.detail');
+
 
 

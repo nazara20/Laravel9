@@ -9,8 +9,17 @@ class UserController extends Controller
 {
     public function index()
     {
-        $user = User::isUser()->paginate(5);
+        $user = User::with('student')->isUser()->paginate(5);
 
         return view('users.index', compact('user'));
     }
+
+    public function detail($id)
+    {
+        $users = User::whereId($id)->firstOrFail();
+        $books = $users->books()->latest()->get();
+
+        return view('users.detail', compact('users', 'books'));
+    }
+    
 }

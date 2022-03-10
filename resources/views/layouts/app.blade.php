@@ -12,7 +12,7 @@
   <body class="bg-light">
     @include('includes.navbar')
 
-    <div class="container">
+    <div class="container pt-3">
       @yield('content')
     </div>
     
