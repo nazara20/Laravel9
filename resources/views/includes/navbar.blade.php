@@ -5,7 +5,7 @@
             </a>
 
               <div id="collapsibleNavId">
-                <ul class="navbar-nav  me-auto mb-2 mb-lg-0">   
+                <ul class="navbar-nav  me-auto mb-2 mb-lg-0">
                   <li class="nav-item">
                     <a class="nav-link {{  (request()->routeIs('beranda')) ? 'active' : ''  }} " aria-current="page" href="{{ route('beranda') }}">Beranda</a>
                   </li>
@@ -16,7 +16,7 @@
                     <a class="nav-link {{  (request()->routeIs('kategori')) ? 'active' : ''  }} " href="{{ route('kategori') }}">Kategori</a>
                   </li>
                   <li class="nav-item">
-                    <a class="nav-link {{  (request()->routeIs('siswa')) ? 'active' : ''  }} " href="{{ route('siswa') }}">Siswa</a>
+                    <a class="nav-link {{  (request()->routeIs('siswa')) ? 'active' : ''  }} " href="{{ route('student.index') }}">Siswa</a>
                   </li>
                 </div>
                   <div>
@@ -33,10 +33,10 @@
                     </ul>
                 </div>
                 </ul>
-              
-             
-              
+
+
+
     </div>
-    
+
 </div>
   </nav>

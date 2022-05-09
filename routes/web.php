@@ -24,8 +24,9 @@ Route::get('/books', [BookController::class, 'index'])->name('buku');
 Route::get('/books.detail/{slug}', [BookController::class, 'detail'])->name('books.detail');
 Route::get('/category', [CategoryController::class, 'index'])->name('kategori');
 Route::get('/categories.detail{slug}', [CategoryController::class, 'detail'])->name('categories.detail');
-Route::get('/users', [UserController::class, 'index'])->name('siswa');
-Route::get('/users.detail/{id}', [UserController::class, 'detail'])->name('users.detail');
+// Route::get('/users', [UserController::class, 'index'])->name('siswa');
+// Route::get('/users.detail/{id}', [UserController::class, 'detail'])->name('users.detail');
+Route::resource('student', App\Http\Controllers\StudentController::class);
 
 
 

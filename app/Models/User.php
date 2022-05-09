@@ -43,12 +43,13 @@ class User extends Authenticatable
         'email_verified_at' => 'datetime',
     ];
 
-    // scope role is user
-    public function scopeIsUser($query)
+    // scope whererole student
+    public function scopeIsStudent($query)
     {
         return $query->whereRole('student');
     }
 
+    //hasone student
     public function student()
     {
         return $this->hasOne(Student::class);
